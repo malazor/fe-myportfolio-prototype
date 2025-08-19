@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyPortfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- (Opcional) Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* Estilos rápidos para tu prototipo */
+        :root {
+            --brand: #0d6efd;
+        }
+
+        body {
+            background: #f8f9fa;
+        }
+
+        .card {
+            border-radius: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, var(--brand), #6610f2);
+            color: #fff;
+            border-radius: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#"><i class="bi bi-lightning-charge"></i> MyPortfolio</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+                aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><button class="btn btn-outline-light ms-lg-3" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Ingresar</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="container my-4">
+        <div class="hero p-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold mb-3">Tu prototipo listo en minutos</h1>
+                    <p class="lead mb-4">Bootstrap puro, sin build, sin frameworks. Ideal para validar ideas rápido.</p>
+                    <a href="#features" class="btn btn-light btn-lg me-2"><i class="bi bi-rocket-takeoff"></i>
+                        Empezar</a>
+                    <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">Ver
+                        demo</button>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-white text-dark rounded-4 p-4 shadow-sm">
+                        <h5 class="fw-semibold">Formulario rápido</h5>
+                        <form class="row g-3 mt-1">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Tu nombre">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="tu@mail.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="2"
+                                    placeholder="¿Qué necesitas prototipar?"></textarea>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <button type="button" class="btn btn-primary">Enviar</button>
+                            </div>
+                            <div class="form-text">* Ejemplo sin backend. Puedes conectar luego una API.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards / Features -->
+    <section id="features" class="container my-5">
+        <h2 class="mb-4">Componentes útiles</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-grid-1x2"></i> Grilla</h5>
+                        <p class="card-text">Organiza tu layout con el sistema de columnas responsive.</p>
+                        <a class="btn btn-outline-primary btn-sm" href="https://getbootstrap.com/docs/5.3/layout/grid/"
+                            target="_blank">Ver docs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-ui-checks-grid"></i> Cards</h5>
+                        <p class="card-text">Muestra módulos de contenido con títulos, texto y acciones.</p>
+                        <a class="btn btn-outline-primary btn-sm"
+                            href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank">Ver docs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-window-stack"></i> Modals</h5>
+                        <p class="card-text">Despliega diálogos sin salir de la página para validar flujos.</p>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#demoModal">Abrir
+                            modal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla de ejemplo -->
+    <section class="container my-5">
+        <h2 class="mb-3">Tabla de ejemplo</h2>
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Elemento demo</td>
+                        <td><span class="badge bg-success">Activo</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Otro item</td>
+                        <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-dark text-light py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <small>&copy; 2025 Tu Marca</small>
+            <a class="link-light" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        </div>
+    </footer>
+
+    <!-- Modal Demo -->
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal de Demo</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">Aquí podrías confirmar acciones del usuario.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ingresar</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="tu@mail.com" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" placeholder="••••••••" required>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember">
+                            <label class="form-check-label" for="remember">Recordarme</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-primary" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS opcional para interacciones -->
+    <script>
+        // Ejemplo: capturar envío del login sin backend
+        document.querySelectorAll('#loginModal form').forEach(f => {
+            f.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Login de prueba (sin backend).');
+            });
+        });
+    </script>
+</body>
+
+</html>
